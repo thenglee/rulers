@@ -7,8 +7,11 @@ module Rulers
 
   class Application
     def call(env)
-      if env['PATH_INFO'] == '/favicon.ico'
-        return [404, {'Content-Type' => 'text/html'}, []]
+      # if env['PATH_INFO'] == '/favicon.ico'
+      if env['PATH_INFO'] == '/'
+        # return [404, {'Content-Type' => 'text/html'}, ['No page found!']]
+        # env['PATH_INFO'] = '/quotes/a_quote'
+        return [303, {'Location' => '/quotes/a_quote'}, []]
       end
 
       klass, act = get_controller_and_action(env)
