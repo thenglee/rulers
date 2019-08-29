@@ -13,7 +13,6 @@ module Rulers
       # if env['PATH_INFO'] == '/favicon.ico'
       if env['PATH_INFO'] == '/'
         # return [404, {'Content-Type' => 'text/html'}, ['No page found!']]
-        # env['PATH_INFO'] = '/quotes/a_quote'
         return [303, {'Location' => '/quotes/a_quote'}, []]
       end
 
