@@ -10,7 +10,7 @@ GEM
   specs:
     erubis (2.7.0)
     power_assert (1.1.5)
-    rack (2.0.7)
+    rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (10.5.0)
